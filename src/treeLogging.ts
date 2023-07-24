@@ -4,7 +4,7 @@ import { Person } from "./personTypes";
 //     workStack = empty stack of Person objects
 //     push rootPerson onto workStack
 
-// 		while workStack is not empty: 
+// 		while workStack is not empty:
 //         currentPerson = pop person off workStack
 //         log the name property of currentPerson
 //         push each element of currentPerson's children onto the workStack
@@ -16,7 +16,7 @@ export function logAllPeopleInTree(topPerson: Person): void {
   while (workStack.length !== 0) {
     const currentPerson = workStack.pop() as Person;
     console.log(currentPerson.name);
-    workStack.push(...currentPerson.children)
+    workStack.push(...currentPerson.children);
   }
 }
 
