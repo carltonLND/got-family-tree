@@ -7,7 +7,7 @@ import {
   logAllPeopleInTree,
   logAllPeopleInTreeWithQueue,
   inTree,
-  isDescendant
+  isDescendant,
 } from "./treeLogging";
 import { printBanner } from "./utils/bannerUtils";
 import { printPersonTreeAsAscii } from "./utils/toAsciiTree";
