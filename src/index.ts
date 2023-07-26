@@ -7,6 +7,7 @@ import {
   logAllPeopleInTree,
   logAllPeopleInTreeWithQueue,
   inTree,
+  isDescendant
 } from "./treeLogging";
 import { printBanner } from "./utils/bannerUtils";
 import { printPersonTreeAsAscii } from "./utils/toAsciiTree";
@@ -26,13 +27,15 @@ async function mainProgram() {
   // printBanner("All people in STARK");
   // logAllPeopleInTree(createStarkTree());
 
-  printBanner("WITH STACK - british royals");
-  logAllPeopleInTree(createBritishSuccessionTree());
+  // printBanner("WITH STACK - british royals");
+  // logAllPeopleInTree(createBritishSuccessionTree());
 
-  printBanner("WITH QUEUE - british royals");
-  logAllPeopleInTreeWithQueue(createBritishSuccessionTree());
+  // printBanner("WITH QUEUE - british royals");
+  // logAllPeopleInTreeWithQueue(createBritishSuccessionTree());
 
   // inTree("Eddard", createStarkTree());
+
+  console.log(isDescendant("Bob Ross", "Carlton", createLannisterTree()));
 
   // You'll need to add more test code for later exercises, too.
 }

@@ -45,3 +45,20 @@ export function inTree(targetName: string, topOfTree: Person): boolean {
 
   return false;
 }
+
+export function isDescendant(descendantName: string, ancestorName: string, topOfTree:Person): boolean {
+  if (descendantName === ancestorName) return false;
+  
+  const workStack: Person[] = [];
+  workStack.push(topOfTree);
+
+  while (workStack.length !== 0) {
+    const currentPerson = workStack.shift() as Person;
+    if (currentPerson.name === ancestorName) {
+      return inTree(descendantName, currentPerson);
+    }
+    workStack.push(...currentPerson.children);
+  }
+
+  return false;
+}
